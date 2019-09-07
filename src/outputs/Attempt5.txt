@@ -1,0 +1,131 @@
+python3.7 ocrtrain2.py
+/usr/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/lib/python3.7/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/usr/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/usr/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/usr/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/usr/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/usr/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/usr/lib/python3.7/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+(592713, 784)
+(592713, 28, 28, 1)
+(592713, 28, 28, 1)
+Name: 5-conv-128-nodes-3-dense1567702224
+WARNING: Logging before flag parsing goes to stderr.
+W0905 22:20:24.810070 140714546767488 deprecation.py:506] From /usr/lib/python3.7/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 28, 28, 32)        320       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 14, 14, 32)        0         
+_________________________________________________________________
+batch_normalization (BatchNo (None, 14, 14, 32)        128       
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 14, 14, 64)        18496     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 7, 7, 64)          0         
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 7, 7, 64)          256       
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 7, 7, 64)          36928     
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 3, 3, 64)          0         
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 3, 3, 64)          256       
+_________________________________________________________________
+flatten (Flatten)            (None, 576)               0         
+_________________________________________________________________
+dense (Dense)                (None, 512)               295424    
+_________________________________________________________________
+dense_1 (Dense)              (None, 512)               262656    
+_________________________________________________________________
+dense_2 (Dense)              (None, 256)               131328    
+_________________________________________________________________
+dense_3 (Dense)              (None, 256)               65792     
+_________________________________________________________________
+dense_4 (Dense)              (None, 128)               32896     
+_________________________________________________________________
+dense_5 (Dense)              (None, 62)                7998      
+=================================================================
+Total params: 852,478
+Trainable params: 852,158
+Non-trainable params: 320
+_________________________________________________________________
+Train on 474170 samples, validate on 118543 samples
+2019-09-05 22:20:26.025392: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-09-05 22:20:26.060367: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2593000000 Hz
+2019-09-05 22:20:26.060676: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x564dcb9e6220 executing computations on platform Host. Devices:
+2019-09-05 22:20:26.060703: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-09-05 22:20:26.198489: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Epoch 1/25
+2019-09-05 22:20:26.803447: I tensorflow/core/profiler/lib/profiler_session.cc:174] Profiler session started.
+474170/474170 [==============================] - 542s 1ms/sample - loss: 0.5044 - acc: 0.8461 - val_loss: 0.4119 - val_acc: 0.8728
+Epoch 2/25
+474170/474170 [==============================] - 529s 1ms/sample - loss: 0.3642 - acc: 0.8854 - val_loss: 0.3499 - val_acc: 0.8920
+Epoch 3/25
+474170/474170 [==============================] - 529s 1ms/sample - loss: 0.3296 - acc: 0.8945 - val_loss: 0.3498 - val_acc: 0.8907
+Epoch 4/25
+474170/474170 [==============================] - 527s 1ms/sample - loss: 0.3093 - acc: 0.8997 - val_loss: 0.3179 - val_acc: 0.8985
+Epoch 5/25
+474170/474170 [==============================] - 525s 1ms/sample - loss: 0.2961 - acc: 0.9032 - val_loss: 0.3281 - val_acc: 0.8952
+Epoch 6/25
+474170/474170 [==============================] - 525s 1ms/sample - loss: 0.2886 - acc: 0.9051 - val_loss: 0.3221 - val_acc: 0.8984
+Epoch 7/25
+474170/474170 [==============================] - 505s 1ms/sample - loss: 0.2834 - acc: 0.9069 - val_loss: 0.3169 - val_acc: 0.9011
+Epoch 8/25
+474170/474170 [==============================] - 514s 1ms/sample - loss: 0.2807 - acc: 0.9077 - val_loss: 0.3089 - val_acc: 0.9028
+Epoch 9/25
+474170/474170 [==============================] - 521s 1ms/sample - loss: 0.2781 - acc: 0.9088 - val_loss: 0.3171 - val_acc: 0.9006
+Epoch 10/25
+474170/474170 [==============================] - 520s 1ms/sample - loss: 0.2782 - acc: 0.9092 - val_loss: 0.3169 - val_acc: 0.9025
+Epoch 11/25
+474170/474170 [==============================] - 485s 1ms/sample - loss: 0.2737 - acc: 0.9102 - val_loss: 0.3227 - val_acc: 0.9030
+Epoch 12/25
+474170/474170 [==============================] - 487s 1ms/sample - loss: 0.2735 - acc: 0.9104 - val_loss: 0.3284 - val_acc: 0.9023
+Epoch 13/25
+474170/474170 [==============================] - 511s 1ms/sample - loss: 0.2717 - acc: 0.9106 - val_loss: 0.3266 - val_acc: 0.9006
+Epoch 14/25
+474170/474170 [==============================] - 458s 966us/sample - loss: 0.2782 - acc: 0.9112 - val_loss: 0.3245 - val_acc: 0.9038
+Epoch 15/25
+474170/474170 [==============================] - 458s 966us/sample - loss: 0.2656 - acc: 0.9130 - val_loss: 0.3372 - val_acc: 0.9001
+Epoch 16/25
+474170/474170 [==============================] - 508s 1ms/sample - loss: 0.2676 - acc: 0.9129 - val_loss: 0.3501 - val_acc: 0.9015
+Epoch 17/25
+474170/474170 [==============================] - 483s 1ms/sample - loss: 0.2682 - acc: 0.9126 - val_loss: 0.3210 - val_acc: 0.9059
+Epoch 18/25
+474170/474170 [==============================] - 465s 980us/sample - loss: 0.2686 - acc: 0.9132 - val_loss: 0.3353 - val_acc: 0.9025
+Epoch 19/25
+474170/474170 [==============================] - 518s 1ms/sample - loss: 0.2649 - acc: 0.9136 - val_loss: 0.3410 - val_acc: 0.9029
+Epoch 20/25
+474170/474170 [==============================] - 517s 1ms/sample - loss: 0.2937 - acc: 0.9118 - val_loss: 0.3503 - val_acc: 0.8966
+Epoch 21/25
+474170/474170 [==============================] - 464s 979us/sample - loss: 0.2660 - acc: 0.9138 - val_loss: 0.3311 - val_acc: 0.9048
+Epoch 22/25
+474170/474170 [==============================] - 455s 960us/sample - loss: 0.2728 - acc: 0.9134 - val_loss: 0.3274 - val_acc: 0.9041
+Epoch 23/25
+474170/474170 [==============================] - 470s 991us/sample - loss: 0.2673 - acc: 0.9137 - val_loss: 0.3261 - val_acc: 0.9040
+Epoch 24/25
+474170/474170 [==============================] - 516s 1ms/sample - loss: 0.2658 - acc: 0.9145 - val_loss: 0.3229 - val_acc: 0.9066
+Epoch 25/25
+474170/474170 [==============================] - 490s 1ms/sample - loss: 0.2636 - acc: 0.9152 - val_loss: 0.3342 - val_acc: 0.9019
+142700/142700 [==============================] - 40s 278us/sample - loss: 0.6032 - acc: 0.7940
