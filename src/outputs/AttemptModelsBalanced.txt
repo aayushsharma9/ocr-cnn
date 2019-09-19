@@ -1,0 +1,248 @@
+Using TensorFlow backend.
+WARNING: Logging before flag parsing goes to stderr.
+W0919 16:34:26.739181 140100379494016 __init__.py:687] 
+
+  TensorFlow's `tf-nightly` package will soon be updated to TensorFlow 2.0.
+
+  Please upgrade your code to TensorFlow 2.0:
+    * https://www.tensorflow.org/beta/guide/migration_guide
+
+  Or install the latest stable TensorFlow 1.X release:
+    * `pip install -U "tensorflow==1.*"`
+
+  Otherwise your code may be broken by the change.
+
+  
+(14800, 27) (88800, 27)
+W0919 16:34:32.689229 140100379494016 deprecation.py:506] From /usr/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1633: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+Name: 5-conv-128-nodes-3-dense1568891073
+Model 1 :
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 26, 26, 32)        320       
+_________________________________________________________________
+batch_normalization (BatchNo (None, 26, 26, 32)        128       
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 24, 24, 32)        9248      
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 24, 24, 32)        128       
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 12, 12, 32)        25632     
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 12, 12, 32)        128       
+_________________________________________________________________
+dropout (Dropout)            (None, 12, 12, 32)        0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 10, 10, 64)        18496     
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 10, 10, 64)        256       
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 8, 8, 64)          36928     
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 8, 8, 64)          256       
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 4, 4, 64)          102464    
+_________________________________________________________________
+batch_normalization_5 (Batch (None, 4, 4, 64)          256       
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 4, 4, 64)          0         
+_________________________________________________________________
+conv2d_6 (Conv2D)            (None, 1, 1, 128)         131200    
+_________________________________________________________________
+batch_normalization_6 (Batch (None, 1, 1, 128)         512       
+_________________________________________________________________
+flatten (Flatten)            (None, 128)               0         
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense (Dense)                (None, 27)                3483      
+=================================================================
+Total params: 329,435
+Trainable params: 328,603
+Non-trainable params: 832
+_________________________________________________________________
+Name: 5-conv-128-nodes-3-dense1568891073
+Model 2 :
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_7 (Conv2D)            (None, 26, 26, 32)        320       
+_________________________________________________________________
+batch_normalization_7 (Batch (None, 26, 26, 32)        128       
+_________________________________________________________________
+conv2d_8 (Conv2D)            (None, 24, 24, 32)        9248      
+_________________________________________________________________
+batch_normalization_8 (Batch (None, 24, 24, 32)        128       
+_________________________________________________________________
+conv2d_9 (Conv2D)            (None, 12, 12, 32)        25632     
+_________________________________________________________________
+batch_normalization_9 (Batch (None, 12, 12, 32)        128       
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 12, 12, 32)        0         
+_________________________________________________________________
+conv2d_10 (Conv2D)           (None, 10, 10, 64)        18496     
+_________________________________________________________________
+batch_normalization_10 (Batc (None, 10, 10, 64)        256       
+_________________________________________________________________
+conv2d_11 (Conv2D)           (None, 8, 8, 64)          36928     
+_________________________________________________________________
+batch_normalization_11 (Batc (None, 8, 8, 64)          256       
+_________________________________________________________________
+conv2d_12 (Conv2D)           (None, 4, 4, 64)          102464    
+_________________________________________________________________
+batch_normalization_12 (Batc (None, 4, 4, 64)          256       
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 4, 4, 64)          0         
+_________________________________________________________________
+conv2d_13 (Conv2D)           (None, 1, 1, 128)         131200    
+_________________________________________________________________
+batch_normalization_13 (Batc (None, 1, 1, 128)         512       
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 128)               0         
+_________________________________________________________________
+dropout_5 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 27)                3483      
+=================================================================
+Total params: 329,435
+Trainable params: 328,603
+Non-trainable params: 832
+_________________________________________________________________
+2019-09-19 16:34:35.133402: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-09-19 16:34:35.161994: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2593000000 Hz
+2019-09-19 16:34:35.162349: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5653b9870750 executing computations on platform Host. Devices:
+2019-09-19 16:34:35.162407: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+Epoch 1/30
+W0919 16:34:36.562923 140100379494016 deprecation.py:323] From /usr/lib/python3.7/site-packages/tensorflow_core/python/keras/optimizer_v2/optimizer_v2.py:468: BaseResourceVariable.constraint (from tensorflow.python.ops.resource_variable_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Apply a constraint manually following the optimizer update step.
+2019-09-19 16:34:37.547108: I tensorflow/core/profiler/lib/profiler_session.cc:184] Profiler session started.
+1248/1248 [==============================] - 202s 162ms/step - loss: 1.0572 - acc: 0.6853 - val_loss: 0.2627 - val_acc: 0.9099
+Epoch 2/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.4608 - acc: 0.8516 - val_loss: 0.2399 - val_acc: 0.9184
+Epoch 3/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.3792 - acc: 0.8781 - val_loss: 0.2039 - val_acc: 0.9307
+Epoch 4/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.3296 - acc: 0.8928 - val_loss: 0.1955 - val_acc: 0.9305
+Epoch 5/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.3057 - acc: 0.8991 - val_loss: 0.1779 - val_acc: 0.9390
+Epoch 6/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.2892 - acc: 0.9057 - val_loss: 0.1966 - val_acc: 0.9300
+Epoch 7/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.2768 - acc: 0.9086 - val_loss: 0.1757 - val_acc: 0.9392
+Epoch 8/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.2649 - acc: 0.9131 - val_loss: 0.1613 - val_acc: 0.9439
+Epoch 9/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.2528 - acc: 0.9164 - val_loss: 0.1601 - val_acc: 0.9440
+Epoch 10/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.2412 - acc: 0.9195 - val_loss: 0.1626 - val_acc: 0.9448
+Epoch 11/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.2377 - acc: 0.9211 - val_loss: 0.1575 - val_acc: 0.9470
+Epoch 12/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.2282 - acc: 0.9243 - val_loss: 0.1529 - val_acc: 0.9477
+Epoch 13/30
+1248/1248 [==============================] - 205s 164ms/step - loss: 0.2232 - acc: 0.9246 - val_loss: 0.1568 - val_acc: 0.9467
+Epoch 14/30
+1248/1248 [==============================] - 203s 163ms/step - loss: 0.2186 - acc: 0.9268 - val_loss: 0.1562 - val_acc: 0.9450
+Epoch 15/30
+1248/1248 [==============================] - 203s 163ms/step - loss: 0.2133 - acc: 0.9283 - val_loss: 0.1562 - val_acc: 0.9462
+Epoch 16/30
+1248/1248 [==============================] - 203s 163ms/step - loss: 0.2093 - acc: 0.9297 - val_loss: 0.1511 - val_acc: 0.9472
+Epoch 17/30
+1248/1248 [==============================] - 203s 162ms/step - loss: 0.2044 - acc: 0.9314 - val_loss: 0.1587 - val_acc: 0.9450
+Epoch 18/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.2032 - acc: 0.9307 - val_loss: 0.1426 - val_acc: 0.9484
+Epoch 19/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.1971 - acc: 0.9334 - val_loss: 0.1436 - val_acc: 0.9497
+Epoch 20/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.1954 - acc: 0.9336 - val_loss: 0.1472 - val_acc: 0.9485
+Epoch 21/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.1970 - acc: 0.9335 - val_loss: 0.1491 - val_acc: 0.9497
+Epoch 22/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.1915 - acc: 0.9348 - val_loss: 0.1409 - val_acc: 0.9515
+Epoch 23/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.1891 - acc: 0.9354 - val_loss: 0.1413 - val_acc: 0.9510
+Epoch 24/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.1871 - acc: 0.9355 - val_loss: 0.1368 - val_acc: 0.9512
+Epoch 25/30
+1248/1248 [==============================] - 202s 162ms/step - loss: 0.1853 - acc: 0.9361 - val_loss: 0.1437 - val_acc: 0.9481
+Epoch 26/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.1799 - acc: 0.9376 - val_loss: 0.1386 - val_acc: 0.9503
+Epoch 27/30
+1248/1248 [==============================] - 202s 161ms/step - loss: 0.1812 - acc: 0.9378 - val_loss: 0.1375 - val_acc: 0.9525
+Epoch 28/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.1776 - acc: 0.9397 - val_loss: 0.1400 - val_acc: 0.9509
+Epoch 29/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.1785 - acc: 0.9381 - val_loss: 0.1402 - val_acc: 0.9499
+Epoch 30/30
+1248/1248 [==============================] - 187s 150ms/step - loss: 0.1754 - acc: 0.9398 - val_loss: 0.1355 - val_acc: 0.9512
+CNN 1: Epochs=30, Train accuracy=0.93977, Validation accuracy=0.95248
+Epoch 1/30
+2019-09-19 18:15:22.722891: I tensorflow/core/profiler/lib/profiler_session.cc:184] Profiler session started.
+1248/1248 [==============================] - 190s 152ms/step - loss: 1.0745 - acc: 0.6794 - val_loss: 0.2717 - val_acc: 0.9070
+Epoch 2/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.4704 - acc: 0.8490 - val_loss: 0.1995 - val_acc: 0.9309
+Epoch 3/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.3864 - acc: 0.8739 - val_loss: 0.1958 - val_acc: 0.9352
+Epoch 4/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.3427 - acc: 0.8888 - val_loss: 0.1710 - val_acc: 0.9413
+Epoch 5/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.3172 - acc: 0.8979 - val_loss: 0.1710 - val_acc: 0.9411
+Epoch 6/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.2936 - acc: 0.9047 - val_loss: 0.1625 - val_acc: 0.9421
+Epoch 7/30
+1248/1248 [==============================] - 191s 153ms/step - loss: 0.2730 - acc: 0.9101 - val_loss: 0.1620 - val_acc: 0.9435
+Epoch 8/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.2674 - acc: 0.9114 - val_loss: 0.1551 - val_acc: 0.9456
+Epoch 9/30
+1248/1248 [==============================] - 201s 161ms/step - loss: 0.2555 - acc: 0.9151 - val_loss: 0.1499 - val_acc: 0.9465
+Epoch 10/30
+1248/1248 [==============================] - 196s 157ms/step - loss: 0.2478 - acc: 0.9176 - val_loss: 0.1626 - val_acc: 0.9431
+Epoch 11/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.2426 - acc: 0.9197 - val_loss: 0.1465 - val_acc: 0.9507
+Epoch 12/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.2313 - acc: 0.9229 - val_loss: 0.1594 - val_acc: 0.9428
+Epoch 13/30
+1248/1248 [==============================] - 187s 150ms/step - loss: 0.2279 - acc: 0.9236 - val_loss: 0.1423 - val_acc: 0.9500
+Epoch 14/30
+1248/1248 [==============================] - 187s 150ms/step - loss: 0.2182 - acc: 0.9269 - val_loss: 0.1408 - val_acc: 0.9515
+Epoch 15/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.2171 - acc: 0.9270 - val_loss: 0.1451 - val_acc: 0.9500
+Epoch 16/30
+1248/1248 [==============================] - 187s 150ms/step - loss: 0.2112 - acc: 0.9280 - val_loss: 0.1382 - val_acc: 0.9516
+Epoch 17/30
+1248/1248 [==============================] - 187s 150ms/step - loss: 0.2074 - acc: 0.9299 - val_loss: 0.1385 - val_acc: 0.9499
+Epoch 18/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.2057 - acc: 0.9300 - val_loss: 0.1377 - val_acc: 0.9518
+Epoch 19/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.2023 - acc: 0.9320 - val_loss: 0.1402 - val_acc: 0.9518
+Epoch 20/30
+1248/1248 [==============================] - 188s 151ms/step - loss: 0.1986 - acc: 0.9322 - val_loss: 0.1308 - val_acc: 0.9539
+Epoch 21/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1922 - acc: 0.9341 - val_loss: 0.1316 - val_acc: 0.9511
+Epoch 22/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1927 - acc: 0.9336 - val_loss: 0.1333 - val_acc: 0.9538
+Epoch 23/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1933 - acc: 0.9340 - val_loss: 0.1342 - val_acc: 0.9539
+Epoch 24/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1892 - acc: 0.9346 - val_loss: 0.1339 - val_acc: 0.9541
+Epoch 25/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1877 - acc: 0.9367 - val_loss: 0.1264 - val_acc: 0.9551
+Epoch 26/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1862 - acc: 0.9368 - val_loss: 0.1236 - val_acc: 0.9569
+Epoch 27/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1823 - acc: 0.9377 - val_loss: 0.1249 - val_acc: 0.9547
+Epoch 28/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1812 - acc: 0.9379 - val_loss: 0.1268 - val_acc: 0.9554
+Epoch 29/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1802 - acc: 0.9384 - val_loss: 0.1265 - val_acc: 0.9545
+Epoch 30/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.1763 - acc: 0.9393 - val_loss: 0.1244 - val_acc: 0.9554
+CNN 2: Epochs=30, Train accuracy=0.93927, Validation accuracy=0.95687
+14800/14800 [==============================] - 9s 596us/sample - loss: 0.1544 - acc: 0.9446
+14800/14800 [==============================] - 9s 598us/sample - loss: 0.1570 - acc: 0.9441
