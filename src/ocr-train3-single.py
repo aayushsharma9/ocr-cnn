@@ -52,11 +52,10 @@ model.add(Conv2D(128, kernel_size = 4, activation='relu'))
 model.add(BatchNormalization())
 model.add(Flatten())
 model.add(Dropout(0.4))
-
 model.add(Dense(num_classes, activation='softmax'))
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy', 'sparse_categorical_accuracy', 'mean_squared_error', 'mean_absolute_error', 'sparse_categorical_entropy'])
 model.summary()
 model.fit(x_train, y_train, epochs=50, batch_size=32, validation_split=0.2, callbacks=[tensorboard, csv_logger])
 model.evaluate(x_test, y_test)
-model.save("/kaggle/working/titanic.hdf5")
+model.save("../titanic1.hdf5")
