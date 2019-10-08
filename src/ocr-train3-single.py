@@ -5,7 +5,7 @@ import cv2
 import time
 from column_names import data
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout, BatchNormalization
-from tensorflow.keras.callbacks import TensorBoard
+from tensorflow.keras.callbacks import TensorBoard, CSVLogger
 from tensorflow.keras.models import Sequential
 
 trainingData = pd.read_csv('../input/emnist/emnist-letters-train.csv', names=data)
@@ -29,9 +29,7 @@ print(x_train.shape)
 NAME = "{}-conv-{}-nodes-{}-dense{}".format(7, 128, 1, int(time.time()))
 print('Name:', NAME)
 tensorboard = TensorBoard(log_dir='logs/{}'.format(NAME))
-
-model = Sequential()
-
+csv_logger = CSVLogger('./csvlogs/{}'.format(NAME), separator=',', append=False)
 model = Sequential()
 
 model.add(Conv2D(32, kernel_size = 3, activation='relu', input_shape = (28, 28, 1)))
@@ -57,8 +55,8 @@ model.add(Dropout(0.4))
 
 model.add(Dense(num_classes, activation='softmax'))
 
-model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy', 'sparse_categorical_accuracy', 'mean_squared_error', 'mean_absolute_error', 'sparse_categorical_entropy'])
 model.summary()
-model.fit(x_train, y_train, epochs=50, batch_size=32, validation_split=0.2, callbacks=[tensorboard])
+model.fit(x_train, y_train, epochs=50, batch_size=32, validation_split=0.2, callbacks=[tensorboard, csv_logger])
 model.evaluate(x_test, y_test)
 model.save("/kaggle/working/titanic.hdf5")
