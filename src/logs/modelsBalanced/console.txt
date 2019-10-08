@@ -1,0 +1,229 @@
+Name: 5-conv-128-nodes-3-dense1570538106
+Model 1 :
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 26, 26, 32)        320       
+_________________________________________________________________
+batch_normalization (BatchNo (None, 26, 26, 32)        128       
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 24, 24, 32)        9248      
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 24, 24, 32)        128       
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 12, 12, 32)        25632     
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 12, 12, 32)        128       
+_________________________________________________________________
+dropout (Dropout)            (None, 12, 12, 32)        0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 10, 10, 64)        18496     
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 10, 10, 64)        256       
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 8, 8, 64)          36928     
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 8, 8, 64)          256       
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 4, 4, 64)          102464    
+_________________________________________________________________
+batch_normalization_5 (Batch (None, 4, 4, 64)          256       
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 4, 4, 64)          0         
+_________________________________________________________________
+conv2d_6 (Conv2D)            (None, 1, 1, 128)         131200    
+_________________________________________________________________
+batch_normalization_6 (Batch (None, 1, 1, 128)         512       
+_________________________________________________________________
+flatten (Flatten)            (None, 128)               0         
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense (Dense)                (None, 47)                6063      
+=================================================================
+Total params: 332,015
+Trainable params: 331,183
+Non-trainable params: 832
+_________________________________________________________________
+Name: 5-conv-128-nodes-3-dense1570538107
+Model 2 :
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_7 (Conv2D)            (None, 26, 26, 32)        320       
+_________________________________________________________________
+batch_normalization_7 (Batch (None, 26, 26, 32)        128       
+_________________________________________________________________
+conv2d_8 (Conv2D)            (None, 24, 24, 32)        9248      
+_________________________________________________________________
+batch_normalization_8 (Batch (None, 24, 24, 32)        128       
+_________________________________________________________________
+conv2d_9 (Conv2D)            (None, 12, 12, 32)        25632     
+_________________________________________________________________
+batch_normalization_9 (Batch (None, 12, 12, 32)        128       
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 12, 12, 32)        0         
+_________________________________________________________________
+conv2d_10 (Conv2D)           (None, 10, 10, 64)        18496     
+_________________________________________________________________
+batch_normalization_10 (Batc (None, 10, 10, 64)        256       
+_________________________________________________________________
+conv2d_11 (Conv2D)           (None, 8, 8, 64)          36928     
+_________________________________________________________________
+batch_normalization_11 (Batc (None, 8, 8, 64)          256       
+_________________________________________________________________
+conv2d_12 (Conv2D)           (None, 4, 4, 64)          102464    
+_________________________________________________________________
+batch_normalization_12 (Batc (None, 4, 4, 64)          256       
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 4, 4, 64)          0         
+_________________________________________________________________
+conv2d_13 (Conv2D)           (None, 1, 1, 128)         131200    
+_________________________________________________________________
+batch_normalization_13 (Batc (None, 1, 1, 128)         512       
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 128)               0         
+_________________________________________________________________
+dropout_5 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 47)                6063      
+=================================================================
+Total params: 332,015
+Trainable params: 331,183
+Non-trainable params: 832
+_________________________________________________________________
+2019-10-08 18:05:08.713445: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-10-08 18:05:08.736013: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2601325000 Hz
+2019-10-08 18:05:08.736286: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5619628c9490 executing computations on platform Host. Devices:
+2019-10-08 18:05:08.736317: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+Epoch 1/30
+W1008 18:05:10.228760 140298448541312 deprecation.py:323] From /usr/lib/python3.7/site-packages/tensorflow_core/python/keras/optimizer_v2/optimizer_v2.py:468: BaseResourceVariable.constraint (from tensorflow.python.ops.resource_variable_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Apply a constraint manually following the optimizer update step.
+2019-10-08 18:05:11.125725: I tensorflow/core/profiler/lib/profiler_session.cc:184] Profiler session started.
+1248/1248 [==============================] - 196s 157ms/step - loss: 1.0667 - acc: 0.6912 - sparse_categorical_accuracy: 0.6912 - mean_squared_error: 238.7541 - mean_absolute_error: 13.5031 - val_loss: 0.2730 - val_acc: 0.9083 - val_sparse_categorical_accuracy: 0.9083 - val_mean_squared_error: 236.0660 - val_mean_absolute_error: 13.4444
+Epoch 2/30
+1248/1248 [==============================] - 196s 157ms/step - loss: 0.4608 - acc: 0.8527 - sparse_categorical_accuracy: 0.8527 - mean_squared_error: 238.7848 - mean_absolute_error: 13.5042 - val_loss: 0.2171 - val_acc: 0.9255 - val_sparse_categorical_accuracy: 0.9255 - val_mean_squared_error: 236.0664 - val_mean_absolute_error: 13.4444
+Epoch 3/30
+1248/1248 [==============================] - 197s 158ms/step - loss: 0.3768 - acc: 0.8785 - sparse_categorical_accuracy: 0.8785 - mean_squared_error: 238.7812 - mean_absolute_error: 13.5044 - val_loss: 0.1963 - val_acc: 0.9297 - val_sparse_categorical_accuracy: 0.9297 - val_mean_squared_error: 236.0666 - val_mean_absolute_error: 13.4444
+Epoch 4/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.3342 - acc: 0.8912 - sparse_categorical_accuracy: 0.8912 - mean_squared_error: 238.7798 - mean_absolute_error: 13.5039 - val_loss: 0.2083 - val_acc: 0.9280 - val_sparse_categorical_accuracy: 0.9280 - val_mean_squared_error: 236.0667 - val_mean_absolute_error: 13.4444
+Epoch 5/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.3115 - acc: 0.8984 - sparse_categorical_accuracy: 0.8984 - mean_squared_error: 238.8067 - mean_absolute_error: 13.5040 - val_loss: 0.1657 - val_acc: 0.9404 - val_sparse_categorical_accuracy: 0.9404 - val_mean_squared_error: 236.0670 - val_mean_absolute_error: 13.4444
+Epoch 6/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2887 - acc: 0.9062 - sparse_categorical_accuracy: 0.9062 - mean_squared_error: 238.7211 - mean_absolute_error: 13.5017 - val_loss: 0.1678 - val_acc: 0.9408 - val_sparse_categorical_accuracy: 0.9408 - val_mean_squared_error: 236.0670 - val_mean_absolute_error: 13.4444
+Epoch 7/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2725 - acc: 0.9108 - sparse_categorical_accuracy: 0.9108 - mean_squared_error: 238.8408 - mean_absolute_error: 13.5066 - val_loss: 0.1680 - val_acc: 0.9381 - val_sparse_categorical_accuracy: 0.9381 - val_mean_squared_error: 236.0670 - val_mean_absolute_error: 13.4444
+Epoch 8/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2646 - acc: 0.9135 - sparse_categorical_accuracy: 0.9135 - mean_squared_error: 238.8129 - mean_absolute_error: 13.5046 - val_loss: 0.1600 - val_acc: 0.9418 - val_sparse_categorical_accuracy: 0.9418 - val_mean_squared_error: 236.0672 - val_mean_absolute_error: 13.4444
+Epoch 9/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.2529 - acc: 0.9163 - sparse_categorical_accuracy: 0.9163 - mean_squared_error: 238.8056 - mean_absolute_error: 13.5041 - val_loss: 0.1501 - val_acc: 0.9458 - val_sparse_categorical_accuracy: 0.9458 - val_mean_squared_error: 236.0670 - val_mean_absolute_error: 13.4444
+Epoch 10/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2435 - acc: 0.9190 - sparse_categorical_accuracy: 0.9190 - mean_squared_error: 238.6676 - mean_absolute_error: 13.5009 - val_loss: 0.1479 - val_acc: 0.9461 - val_sparse_categorical_accuracy: 0.9461 - val_mean_squared_error: 236.0672 - val_mean_absolute_error: 13.4444
+Epoch 11/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.2376 - acc: 0.9214 - sparse_categorical_accuracy: 0.9214 - mean_squared_error: 238.7262 - mean_absolute_error: 13.5023 - val_loss: 0.1537 - val_acc: 0.9426 - val_sparse_categorical_accuracy: 0.9426 - val_mean_squared_error: 236.0671 - val_mean_absolute_error: 13.4444
+Epoch 12/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.2305 - acc: 0.9247 - sparse_categorical_accuracy: 0.9247 - mean_squared_error: 238.7697 - mean_absolute_error: 13.5036 - val_loss: 0.1492 - val_acc: 0.9474 - val_sparse_categorical_accuracy: 0.9474 - val_mean_squared_error: 236.0671 - val_mean_absolute_error: 13.4444
+Epoch 13/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2218 - acc: 0.9269 - sparse_categorical_accuracy: 0.9269 - mean_squared_error: 238.8477 - mean_absolute_error: 13.5060 - val_loss: 0.1464 - val_acc: 0.9491 - val_sparse_categorical_accuracy: 0.9491 - val_mean_squared_error: 236.0672 - val_mean_absolute_error: 13.4444
+Epoch 14/30
+1248/1248 [==============================] - 191s 153ms/step - loss: 0.2168 - acc: 0.9284 - sparse_categorical_accuracy: 0.9284 - mean_squared_error: 238.8588 - mean_absolute_error: 13.5059 - val_loss: 0.1412 - val_acc: 0.9486 - val_sparse_categorical_accuracy: 0.9486 - val_mean_squared_error: 236.0673 - val_mean_absolute_error: 13.4444
+Epoch 15/30
+1248/1248 [==============================] - 199s 159ms/step - loss: 0.2134 - acc: 0.9287 - sparse_categorical_accuracy: 0.9287 - mean_squared_error: 238.7553 - mean_absolute_error: 13.5033 - val_loss: 0.1428 - val_acc: 0.9484 - val_sparse_categorical_accuracy: 0.9484 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 16/30
+1248/1248 [==============================] - 198s 159ms/step - loss: 0.2087 - acc: 0.9298 - sparse_categorical_accuracy: 0.9298 - mean_squared_error: 238.7664 - mean_absolute_error: 13.5034 - val_loss: 0.1450 - val_acc: 0.9458 - val_sparse_categorical_accuracy: 0.9458 - val_mean_squared_error: 236.0672 - val_mean_absolute_error: 13.4444
+Epoch 17/30
+1248/1248 [==============================] - 193s 154ms/step - loss: 0.2068 - acc: 0.9316 - sparse_categorical_accuracy: 0.9316 - mean_squared_error: 238.7403 - mean_absolute_error: 13.5027 - val_loss: 0.1458 - val_acc: 0.9459 - val_sparse_categorical_accuracy: 0.9459 - val_mean_squared_error: 236.0673 - val_mean_absolute_error: 13.4444
+Epoch 18/30
+1248/1248 [==============================] - 187s 149ms/step - loss: 0.2013 - acc: 0.9322 - sparse_categorical_accuracy: 0.9322 - mean_squared_error: 238.5823 - mean_absolute_error: 13.4964 - val_loss: 0.1421 - val_acc: 0.9477 - val_sparse_categorical_accuracy: 0.9477 - val_mean_squared_error: 236.0673 - val_mean_absolute_error: 13.4444
+Epoch 19/30
+1248/1248 [==============================] - 187s 149ms/step - loss: 0.1991 - acc: 0.9320 - sparse_categorical_accuracy: 0.9320 - mean_squared_error: 239.0414 - mean_absolute_error: 13.5129 - val_loss: 0.1360 - val_acc: 0.9501 - val_sparse_categorical_accuracy: 0.9501 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 20/30
+1248/1248 [==============================] - 198s 159ms/step - loss: 0.1947 - acc: 0.9339 - sparse_categorical_accuracy: 0.9339 - mean_squared_error: 238.6009 - mean_absolute_error: 13.4982 - val_loss: 0.1379 - val_acc: 0.9492 - val_sparse_categorical_accuracy: 0.9492 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 21/30
+1248/1248 [==============================] - 198s 159ms/step - loss: 0.1922 - acc: 0.9355 - sparse_categorical_accuracy: 0.9355 - mean_squared_error: 238.8064 - mean_absolute_error: 13.5047 - val_loss: 0.1381 - val_acc: 0.9489 - val_sparse_categorical_accuracy: 0.9489 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 22/30
+1248/1248 [==============================] - 197s 158ms/step - loss: 0.1893 - acc: 0.9357 - sparse_categorical_accuracy: 0.9357 - mean_squared_error: 238.9725 - mean_absolute_error: 13.5113 - val_loss: 0.1327 - val_acc: 0.9520 - val_sparse_categorical_accuracy: 0.9520 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 23/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1887 - acc: 0.9351 - sparse_categorical_accuracy: 0.9351 - mean_squared_error: 238.6941 - mean_absolute_error: 13.5019 - val_loss: 0.1383 - val_acc: 0.9505 - val_sparse_categorical_accuracy: 0.9505 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 24/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.1844 - acc: 0.9367 - sparse_categorical_accuracy: 0.9367 - mean_squared_error: 238.6350 - mean_absolute_error: 13.4973 - val_loss: 0.1373 - val_acc: 0.9509 - val_sparse_categorical_accuracy: 0.9509 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 25/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1864 - acc: 0.9376 - sparse_categorical_accuracy: 0.9376 - mean_squared_error: 238.8595 - mean_absolute_error: 13.5058 - val_loss: 0.1333 - val_acc: 0.9508 - val_sparse_categorical_accuracy: 0.9508 - val_mean_squared_error: 236.0675 - val_mean_absolute_error: 13.4444
+Epoch 26/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.1811 - acc: 0.9384 - sparse_categorical_accuracy: 0.9384 - mean_squared_error: 238.7819 - mean_absolute_error: 13.5036 - val_loss: 0.1324 - val_acc: 0.9519 - val_sparse_categorical_accuracy: 0.9519 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 27/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1795 - acc: 0.9389 - sparse_categorical_accuracy: 0.9389 - mean_squared_error: 238.7192 - mean_absolute_error: 13.5010 - val_loss: 0.1354 - val_acc: 0.9502 - val_sparse_categorical_accuracy: 0.9502 - val_mean_squared_error: 236.0675 - val_mean_absolute_error: 13.4444
+Epoch 28/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1807 - acc: 0.9391 - sparse_categorical_accuracy: 0.9391 - mean_squared_error: 238.8070 - mean_absolute_error: 13.5050 - val_loss: 0.1347 - val_acc: 0.9511 - val_sparse_categorical_accuracy: 0.9511 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 29/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1772 - acc: 0.9395 - sparse_categorical_accuracy: 0.9395 - mean_squared_error: 238.8276 - mean_absolute_error: 13.5071 - val_loss: 0.1359 - val_acc: 0.9530 - val_sparse_categorical_accuracy: 0.9530 - val_mean_squared_error: 236.0674 - val_mean_absolute_error: 13.4444
+Epoch 30/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1749 - acc: 0.9406 - sparse_categorical_accuracy: 0.9406 - mean_squared_error: 238.8525 - mean_absolute_error: 13.5051 - val_loss: 0.1297 - val_acc: 0.9515 - val_sparse_categorical_accuracy: 0.9515 - val_mean_squared_error: 236.0675 - val_mean_absolute_error: 13.4444
+CNN 1: Epochs=30, Train accuracy=0.94064, Validation accuracy=0.95304
+Epoch 1/30
+2019-10-08 19:39:30.193030: I tensorflow/core/profiler/lib/profiler_session.cc:184] Profiler session started.
+1248/1248 [==============================] - 186s 149ms/step - loss: 1.0426 - acc: 0.6987 - sparse_categorical_accuracy: 0.6987 - mean_squared_error: 238.6442 - mean_absolute_error: 13.5045 - val_loss: 0.2521 - val_acc: 0.9139 - val_sparse_categorical_accuracy: 0.9139 - val_mean_squared_error: 237.0109 - val_mean_absolute_error: 13.4303
+Epoch 2/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.4553 - acc: 0.8553 - sparse_categorical_accuracy: 0.8553 - mean_squared_error: 238.7147 - mean_absolute_error: 13.5070 - val_loss: 0.2086 - val_acc: 0.9322 - val_sparse_categorical_accuracy: 0.9322 - val_mean_squared_error: 237.0116 - val_mean_absolute_error: 13.4303
+Epoch 3/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.3804 - acc: 0.8773 - sparse_categorical_accuracy: 0.8773 - mean_squared_error: 238.6736 - mean_absolute_error: 13.5050 - val_loss: 0.1848 - val_acc: 0.9357 - val_sparse_categorical_accuracy: 0.9357 - val_mean_squared_error: 237.0117 - val_mean_absolute_error: 13.4303
+Epoch 4/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.3378 - acc: 0.8901 - sparse_categorical_accuracy: 0.8901 - mean_squared_error: 238.6517 - mean_absolute_error: 13.5049 - val_loss: 0.1799 - val_acc: 0.9399 - val_sparse_categorical_accuracy: 0.9399 - val_mean_squared_error: 237.0118 - val_mean_absolute_error: 13.4303
+Epoch 5/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.3092 - acc: 0.8982 - sparse_categorical_accuracy: 0.8982 - mean_squared_error: 238.7128 - mean_absolute_error: 13.5066 - val_loss: 0.1668 - val_acc: 0.9412 - val_sparse_categorical_accuracy: 0.9412 - val_mean_squared_error: 237.0119 - val_mean_absolute_error: 13.4303
+Epoch 6/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2880 - acc: 0.9041 - sparse_categorical_accuracy: 0.9041 - mean_squared_error: 238.5613 - mean_absolute_error: 13.5016 - val_loss: 0.1619 - val_acc: 0.9447 - val_sparse_categorical_accuracy: 0.9447 - val_mean_squared_error: 237.0119 - val_mean_absolute_error: 13.4303
+Epoch 7/30
+1248/1248 [==============================] - 186s 149ms/step - loss: 0.2740 - acc: 0.9098 - sparse_categorical_accuracy: 0.9098 - mean_squared_error: 238.6996 - mean_absolute_error: 13.5056 - val_loss: 0.1598 - val_acc: 0.9453 - val_sparse_categorical_accuracy: 0.9453 - val_mean_squared_error: 237.0121 - val_mean_absolute_error: 13.4303
+Epoch 8/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2614 - acc: 0.9151 - sparse_categorical_accuracy: 0.9151 - mean_squared_error: 238.7599 - mean_absolute_error: 13.5097 - val_loss: 0.1562 - val_acc: 0.9467 - val_sparse_categorical_accuracy: 0.9467 - val_mean_squared_error: 237.0121 - val_mean_absolute_error: 13.4303
+Epoch 9/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2508 - acc: 0.9180 - sparse_categorical_accuracy: 0.9180 - mean_squared_error: 238.6951 - mean_absolute_error: 13.5051 - val_loss: 0.1702 - val_acc: 0.9422 - val_sparse_categorical_accuracy: 0.9422 - val_mean_squared_error: 237.0121 - val_mean_absolute_error: 13.4303
+Epoch 10/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.2431 - acc: 0.9193 - sparse_categorical_accuracy: 0.9193 - mean_squared_error: 238.6465 - mean_absolute_error: 13.5053 - val_loss: 0.1460 - val_acc: 0.9489 - val_sparse_categorical_accuracy: 0.9489 - val_mean_squared_error: 237.0121 - val_mean_absolute_error: 13.4303
+Epoch 11/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.2356 - acc: 0.9218 - sparse_categorical_accuracy: 0.9218 - mean_squared_error: 238.7159 - mean_absolute_error: 13.5058 - val_loss: 0.1489 - val_acc: 0.9480 - val_sparse_categorical_accuracy: 0.9480 - val_mean_squared_error: 237.0122 - val_mean_absolute_error: 13.4303
+Epoch 12/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2281 - acc: 0.9232 - sparse_categorical_accuracy: 0.9232 - mean_squared_error: 238.5808 - mean_absolute_error: 13.5024 - val_loss: 0.1425 - val_acc: 0.9499 - val_sparse_categorical_accuracy: 0.9499 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 13/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.2257 - acc: 0.9236 - sparse_categorical_accuracy: 0.9236 - mean_squared_error: 238.6593 - mean_absolute_error: 13.5054 - val_loss: 0.1501 - val_acc: 0.9490 - val_sparse_categorical_accuracy: 0.9490 - val_mean_squared_error: 237.0122 - val_mean_absolute_error: 13.4303
+Epoch 14/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.2194 - acc: 0.9275 - sparse_categorical_accuracy: 0.9275 - mean_squared_error: 238.7394 - mean_absolute_error: 13.5072 - val_loss: 0.1510 - val_acc: 0.9508 - val_sparse_categorical_accuracy: 0.9508 - val_mean_squared_error: 237.0121 - val_mean_absolute_error: 13.4303
+Epoch 15/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2146 - acc: 0.9283 - sparse_categorical_accuracy: 0.9283 - mean_squared_error: 238.6603 - mean_absolute_error: 13.5044 - val_loss: 0.1485 - val_acc: 0.9485 - val_sparse_categorical_accuracy: 0.9485 - val_mean_squared_error: 237.0122 - val_mean_absolute_error: 13.4303
+Epoch 16/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.2102 - acc: 0.9288 - sparse_categorical_accuracy: 0.9288 - mean_squared_error: 238.6102 - mean_absolute_error: 13.5036 - val_loss: 0.1430 - val_acc: 0.9521 - val_sparse_categorical_accuracy: 0.9521 - val_mean_squared_error: 237.0122 - val_mean_absolute_error: 13.4303
+Epoch 17/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2051 - acc: 0.9308 - sparse_categorical_accuracy: 0.9308 - mean_squared_error: 238.8260 - mean_absolute_error: 13.5113 - val_loss: 0.1412 - val_acc: 0.9503 - val_sparse_categorical_accuracy: 0.9503 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 18/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2027 - acc: 0.9320 - sparse_categorical_accuracy: 0.9320 - mean_squared_error: 238.4336 - mean_absolute_error: 13.4964 - val_loss: 0.1443 - val_acc: 0.9488 - val_sparse_categorical_accuracy: 0.9488 - val_mean_squared_error: 237.0122 - val_mean_absolute_error: 13.4303
+Epoch 19/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.2020 - acc: 0.9316 - sparse_categorical_accuracy: 0.9316 - mean_squared_error: 238.7097 - mean_absolute_error: 13.5068 - val_loss: 0.1447 - val_acc: 0.9516 - val_sparse_categorical_accuracy: 0.9516 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 20/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.1973 - acc: 0.9324 - sparse_categorical_accuracy: 0.9324 - mean_squared_error: 238.8998 - mean_absolute_error: 13.5129 - val_loss: 0.1435 - val_acc: 0.9517 - val_sparse_categorical_accuracy: 0.9517 - val_mean_squared_error: 237.0122 - val_mean_absolute_error: 13.4303
+Epoch 21/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.1928 - acc: 0.9341 - sparse_categorical_accuracy: 0.9341 - mean_squared_error: 238.5829 - mean_absolute_error: 13.5034 - val_loss: 0.1409 - val_acc: 0.9501 - val_sparse_categorical_accuracy: 0.9501 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 22/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.1913 - acc: 0.9346 - sparse_categorical_accuracy: 0.9346 - mean_squared_error: 238.5549 - mean_absolute_error: 13.4997 - val_loss: 0.1381 - val_acc: 0.9526 - val_sparse_categorical_accuracy: 0.9526 - val_mean_squared_error: 237.0122 - val_mean_absolute_error: 13.4303
+Epoch 23/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.1888 - acc: 0.9347 - sparse_categorical_accuracy: 0.9347 - mean_squared_error: 238.8126 - mean_absolute_error: 13.5109 - val_loss: 0.1348 - val_acc: 0.9529 - val_sparse_categorical_accuracy: 0.9529 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 24/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.1882 - acc: 0.9357 - sparse_categorical_accuracy: 0.9357 - mean_squared_error: 238.5612 - mean_absolute_error: 13.5017 - val_loss: 0.1423 - val_acc: 0.9515 - val_sparse_categorical_accuracy: 0.9515 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 25/30
+1248/1248 [==============================] - 184s 148ms/step - loss: 0.1852 - acc: 0.9372 - sparse_categorical_accuracy: 0.9372 - mean_squared_error: 238.6971 - mean_absolute_error: 13.5050 - val_loss: 0.1331 - val_acc: 0.9542 - val_sparse_categorical_accuracy: 0.9542 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 26/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1837 - acc: 0.9368 - sparse_categorical_accuracy: 0.9368 - mean_squared_error: 238.8938 - mean_absolute_error: 13.5158 - val_loss: 0.1362 - val_acc: 0.9539 - val_sparse_categorical_accuracy: 0.9539 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 27/30
+1248/1248 [==============================] - 187s 150ms/step - loss: 0.1806 - acc: 0.9373 - sparse_categorical_accuracy: 0.9373 - mean_squared_error: 238.5290 - mean_absolute_error: 13.4978 - val_loss: 0.1357 - val_acc: 0.9533 - val_sparse_categorical_accuracy: 0.9533 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 28/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1798 - acc: 0.9389 - sparse_categorical_accuracy: 0.9389 - mean_squared_error: 238.7889 - mean_absolute_error: 13.5100 - val_loss: 0.1339 - val_acc: 0.9521 - val_sparse_categorical_accuracy: 0.9521 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 29/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1801 - acc: 0.9385 - sparse_categorical_accuracy: 0.9385 - mean_squared_error: 238.4347 - mean_absolute_error: 13.4964 - val_loss: 0.1344 - val_acc: 0.9539 - val_sparse_categorical_accuracy: 0.9539 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+Epoch 30/30
+1248/1248 [==============================] - 185s 148ms/step - loss: 0.1742 - acc: 0.9393 - sparse_categorical_accuracy: 0.9393 - mean_squared_error: 238.7510 - mean_absolute_error: 13.5084 - val_loss: 0.1408 - val_acc: 0.9510 - val_sparse_categorical_accuracy: 0.9510 - val_mean_squared_error: 237.0123 - val_mean_absolute_error: 13.4303
+CNN 2: Epochs=30, Train accuracy=0.93927, Validation accuracy=0.95417
+14800/14800 [==============================] - 9s 593us/sample - loss: 0.1589 - acc: 0.9424 - sparse_categorical_accuracy: 0.9424 - mean_squared_error: 123.3614 - mean_absolute_error: 9.7355
+14800/14800 [==============================] - 9s 590us/sample - loss: 0.1606 - acc: 0.9420 - sparse_categorical_accuracy: 0.9420 - mean_squared_error: 123.3613 - mean_absolute_error: 9.7355
