@@ -11,9 +11,9 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.callbacks import LearningRateScheduler, CSVLogger
 from column_names import data
 
-trainingData = pd.read_csv('../datasets/emnist-balanced-train.csv', names=data)
-testData = pd.read_csv('../datasets/emnist-balanced-test.csv', names=data)
-num_classes = 47
+trainingData = pd.read_csv('../datasets/emnist-digits-train.csv', names=data)
+testData = pd.read_csv('../datasets/emnist-digits-test.csv', names=data)
+num_classes = 10
 x_train = trainingData.loc[:, trainingData.columns != 'label']
 y_train = trainingData['label']
 x_test = testData.loc[:, testData.columns != 'label']
@@ -61,13 +61,13 @@ for j in range(nets):
     model[j].add(BatchNormalization())
     model[j].add(Flatten())
     model[j].add(Dropout(0.4))
-    model[j].add(Dense(num_classes, activation='sigmoid'))
+    model[j].add(Dense(num_classes, activation='softmax'))
 
     model[j].compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=['accuracy', 'sparse_categorical_accuracy', 'mean_squared_error', 'mean_absolute_error'])
 
     NAME = "{}-conv-{}-nodes-{}-dense{}".format(5, 128, 3, int(time.time()))
     print('Name:', NAME)
-    tensorboard[j] = TensorBoard(log_dir='logs/modelsBalancedFinal1/{}______{}'.format(NAME, j))
+    tensorboard[j] = TensorBoard(log_dir='logs/modelsBalanced/{}______{}'.format(NAME, j))
     csv_logger[j] = CSVLogger('./csvlogs/{}__{}.csv'.format(NAME, j), separator=',', append=False)
 
     print('Model', j+1, ':')
@@ -78,7 +78,7 @@ epochs = 30
 history = [0] * nets
 
 for j in range(nets):
-    X_train2, X_val2, Y_train2, Y_val2 = train_test_split(X_train, Y_train, test_size = 0.3)
+    X_train2, X_val2, Y_train2, Y_val2 = train_test_split(X_train, Y_train, test_size = 0.1)
     history[j] = model[j].fit_generator(datagen.flow(X_train2,Y_train2, batch_size=64),
         epochs = epochs, steps_per_epoch = X_train2.shape[0]//64,  
         validation_data = (X_val2,Y_val2),
@@ -91,4 +91,4 @@ for j in range(nets):
 	    model[j].evaluate(X_test, Y_test)
 
 for j in range(nets):
-	model[j].save("logs/modelsBalancedFinal1/model{0:d}.hdf5".format(j+1))
+	model[j].save("logs/modelsDigitsFinal/model{0:d}.hdf5".format(j+1))
