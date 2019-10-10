@@ -61,7 +61,7 @@ for j in range(nets):
     model[j].add(BatchNormalization())
     model[j].add(Flatten())
     model[j].add(Dropout(0.4))
-    model[j].add(Dense(num_classes, activation='sigmoid'))
+    model[j].add(Dense(num_classes, activation='softmax'))
 
     model[j].compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=['accuracy', 'sparse_categorical_accuracy', 'mean_squared_error', 'mean_absolute_error'])
 
