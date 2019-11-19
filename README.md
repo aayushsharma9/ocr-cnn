@@ -38,7 +38,3 @@ Non-trainable params: 832<br/>
 Legend
 ![Sparse Categorical Accuracy Comparison per Epoch](https://i.imgur.com/WLQMfPF.png)
 <p align=center>Sparse Categorical Accuracy Comparison per Epoch</p>
-![Sparse Categorical Cross Entropy Comparison per Epoch](https://i.imgur.com/ODkvnP9.png)
-<p align=center>Sparse Categorical Cross Entropy Comparison per Epoch</p>
-![Learning Rate per Epoch](https://i.imgur.com/U77Xyvu.png)
-<p align=center>Learning Rate per Epoch</p>
