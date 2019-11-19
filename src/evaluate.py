@@ -26,9 +26,6 @@ cv2.waitKey(2000)
 x_test = np.reshape(x_test, (-1, 28, 28, 1))
 
 model = tf.keras.models.load_model("logs/modelsBalancedFinal/model1.hdf5")
-# model = tf.keras.models.load_model("../titanic-balanced.hdf5")
-# print(x_test[0], x_test.shape, x_test[0].shape)
-# model.evaluate(x_test, y_test)
 
 for i in range(len(x_test)):
     y = model.predict_classes(np.reshape(x_test[i], (-1, 28, 28, 1)))

@@ -22,29 +22,22 @@ def image_resize(image, width=None, height=None, inter=cv2.INTER_AREA):
     return resized
 
 
-file = "../image.png"
+file = "../sample.jpg"
 
 img = cv2.imread(file, cv2.IMREAD_COLOR)
-img28 = image_resize(img, width=28)
+img28 = image_resize(img, width=64)
 img28_gray = cv2.cvtColor(img28, cv2.COLOR_BGR2GRAY)
-# (thresh, img28_bw) = cv2.threshold(img28_gray, 150, 255, cv2.THRESH_BINARY)
-# (thresh, img28_bw) = cv2.threshold(img28_gray, 180, 255, cv2.THRESH_BINARY)
+(thresh, img28_bw) = cv2.threshold(img28_gray, 180, 255, cv2.THRESH_BINARY)
 img28_gray_inv = cv2.bitwise_not(img28_gray)
-# img28_gray_inv = img28_gray
 print(img28_gray_inv.shape)
 cv2.imshow('image', img28_gray_inv)
 cv2.waitKey(2000)
 img28_gray_inv = cv2.transpose(img28_gray_inv)
 cv2.imshow('image', img28_gray_inv)
 cv2.waitKey(2000)
-# img28_gray_inv = array(img28_gray_inv) / 255
-# prediction_set = zeros((1, 28, 28))
-# prediction_set[0] = img28_gray_inv / 255
-# prediction_set = reshape(img28_gray_inv, (-1, 28, 28, 1))
 prediction_set = reshape(img28_gray_inv, (-1, 28, 28, 1))
+prediction_set = prediction_set.astype('float16')
 print(prediction_set[0].shape)
-# model = tf.keras.models.load_model("../model5epochs.hdf5")
-model = tf.keras.models.load_model("logs/modelsBalancedFinal1/model1.hdf5")
-# model = tf.keras.models.load_model("../finalModel4.hdf5")
+model = tf.keras.models.load_model("logs/modelsBalancedComplete/checkpoint.hdf5")
 print(model.predict_classes(prediction_set))
 print(model.predict(prediction_set))

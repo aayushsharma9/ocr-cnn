@@ -1,0 +1,2 @@
+epoch,accuracy,loss,lr,mean_absolute_error,mean_squared_error,sparse_categorical_accuracy,val_accuracy,val_loss,val_mean_absolute_error,val_mean_squared_error,val_sparse_categorical_accuracy
+0,0.46969986,5.295117852193751,0.001,24.950981,798.3268,0.46969986,0.5443527,4.681150695172752,24.912872,798.00745,0.5443527
