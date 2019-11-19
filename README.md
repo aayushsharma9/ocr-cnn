@@ -1,4 +1,4 @@
-# ocr-cnn
+# OCR - CNN
 ### Overview
 Machine learning model trained on a Convolutional Neural Network to recognize handwritten digits and characters of English Alphabet.
 The project uses the [NIST Special Database 19](https://www.nist.gov/srd/nist-special-database-19) which contains a labelled image dataset of 62 classes i.e., 10 digits and 52 uppercase and lowercase characters from the English Alphabet.
@@ -31,3 +31,14 @@ dense (Dense)               |       (None, 48)   	            	|       24624    
 Total params: 4,479,344<br/>
 Trainable params: 4,478,512<br/>
 Non-trainable params: 832<br/>
+
+### Tensorboard Results
+
+![Legend](https://i.imgur.com/x1Lq4uA.png)<br/>
+Legend
+![Sparse Categorical Accuracy Comparison per Epoch](https://i.imgur.com/WLQMfPF.png)
+<p align=center>Sparse Categorical Accuracy Comparison per Epoch</p>
+![Sparse Categorical Cross Entropy Comparison per Epoch](https://i.imgur.com/ODkvnP9.png)
+<p align=center>Sparse Categorical Cross Entropy Comparison per Epoch</p>
+![Learning Rate per Epoch](https://i.imgur.com/U77Xyvu.png)
+<p align=center>Learning Rate per Epoch</p>
