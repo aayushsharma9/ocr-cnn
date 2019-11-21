@@ -34,7 +34,13 @@ Non-trainable params: 832<br/>
 
 ### Tensorboard Results
 
-![Legend](https://i.imgur.com/x1Lq4uA.png)<br/>
-Legend
+![Legend](https://i.imgur.com/x1Lq4uA.png)
 ![Sparse Categorical Accuracy Comparison per Epoch](https://i.imgur.com/WLQMfPF.png)
-<p align=center>Sparse Categorical Accuracy Comparison per Epoch</p>
+Sparse Categorical Accuracy Comparison per Epoch
+![Sparse Categorical Cross Entropy Comparison per Epoch](https://i.imgur.com/ODkvnP9.png)
+Sparse Categorical Cross Entropy Comparison per Epoch
+![Learning Rate per Epoch](https://i.imgur.com/U77Xyvu.png)
+Learning Rate per Epoch
+
+### Full Project
+The machine learning model is used as a part of [this project](https://github.com/chaits98/ocr-android).
